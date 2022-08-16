@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00A2DA9B40F3EFFEDE335178 /* Pods_LoginViewCode_Curso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC3387188141A0FBEF2F8CAD /* Pods_LoginViewCode_Curso.framework */; };
 		14C04A9428A6F3A6000EDCB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C04A9328A6F3A6000EDCB9 /* AppDelegate.swift */; };
 		14C04A9628A6F3A6000EDCB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C04A9528A6F3A6000EDCB9 /* SceneDelegate.swift */; };
 		14C04A9828A6F3A6000EDCB9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C04A9728A6F3A6000EDCB9 /* LoginVC.swift */; };
@@ -28,6 +29,9 @@
 		14C04AAA28A70A99000EDCB9 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		14C04AB128A920F9000EDCB9 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		14C04AB328A92285000EDCB9 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
+		219310725322121A5CA1E6D7 /* Pods-LoginViewCode-Curso.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginViewCode-Curso.debug.xcconfig"; path = "Target Support Files/Pods-LoginViewCode-Curso/Pods-LoginViewCode-Curso.debug.xcconfig"; sourceTree = "<group>"; };
+		7A0372115E43082717D8E89D /* Pods-LoginViewCode-Curso.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginViewCode-Curso.release.xcconfig"; path = "Target Support Files/Pods-LoginViewCode-Curso/Pods-LoginViewCode-Curso.release.xcconfig"; sourceTree = "<group>"; };
+		AC3387188141A0FBEF2F8CAD /* Pods_LoginViewCode_Curso.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginViewCode_Curso.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +39,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00A2DA9B40F3EFFEDE335178 /* Pods_LoginViewCode_Curso.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09515690BC6533952F93AC56 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				219310725322121A5CA1E6D7 /* Pods-LoginViewCode-Curso.debug.xcconfig */,
+				7A0372115E43082717D8E89D /* Pods-LoginViewCode-Curso.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		14C04A8728A6F3A6000EDCB9 = {
 			isa = PBXGroup;
 			children = (
 				14C04A9228A6F3A6000EDCB9 /* LoginViewCode-Curso */,
 				14C04A9128A6F3A6000EDCB9 /* Products */,
+				09515690BC6533952F93AC56 /* Pods */,
+				8A2743B082FE751FFB006683 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +138,14 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
+		8A2743B082FE751FFB006683 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC3387188141A0FBEF2F8CAD /* Pods_LoginViewCode_Curso.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,9 +153,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14C04AA428A6F3AA000EDCB9 /* Build configuration list for PBXNativeTarget "LoginViewCode-Curso" */;
 			buildPhases = (
+				DC40EB4C3ED7DEE39EB93E3D /* [CP] Check Pods Manifest.lock */,
 				14C04A8C28A6F3A6000EDCB9 /* Sources */,
 				14C04A8D28A6F3A6000EDCB9 /* Frameworks */,
 				14C04A8E28A6F3A6000EDCB9 /* Resources */,
+				6102482EC48C7B75B110FBAB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,6 +212,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6102482EC48C7B75B110FBAB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoginViewCode-Curso/Pods-LoginViewCode-Curso-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoginViewCode-Curso/Pods-LoginViewCode-Curso-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LoginViewCode-Curso/Pods-LoginViewCode-Curso-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC40EB4C3ED7DEE39EB93E3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoginViewCode-Curso-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		14C04A8C28A6F3A6000EDCB9 /* Sources */ = {
@@ -330,6 +399,7 @@
 		};
 		14C04AA528A6F3AA000EDCB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 219310725322121A5CA1E6D7 /* Pods-LoginViewCode-Curso.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -356,6 +426,7 @@
 		};
 		14C04AA628A6F3AA000EDCB9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A0372115E43082717D8E89D /* Pods-LoginViewCode-Curso.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

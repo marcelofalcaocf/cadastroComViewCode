@@ -92,7 +92,17 @@ class LoginScreen: UIView {
         super.init(frame: frame)
         self.configBackGround()
         self.configSuperView()
+        
+        //-----------------------
+        self.configLoginLabelContraint()
+        self.configLogoAppImageViewContraint()
+        self.configEmailTextFieldConstraint()
+        self.configPasswordTextFieldContraint()
+        self.configLoginButtonConstraint()
+        self.configRegisterButtonConstraint()
+        //-----------------------
         self.setUpContraints()
+        self.configButtonEnabel(false)
     }
     
     private func configBackGround() {
@@ -121,6 +131,27 @@ class LoginScreen: UIView {
         self.delegate?.actionRegisterButton()
     }
     
+    public func validaTextFields() {
+        let email: String = self.emailTextField.text ?? "" // sao opcionais
+        let password: String = self.passwordTextField.text ?? "" // sao opcionais
+        
+        if email != "" && password != "" { // poderia colocar "if !email.isEmpty && !password.isEmpty {}
+            self.configButtonEnabel(true)
+        } else {
+            self.configButtonEnabel(false)
+        }
+    }
+    
+    private func configButtonEnabel(_ enabel: Bool) {
+        if enabel {
+            self.loginButton.setTitleColor(.white, for: .normal)
+            self.loginButton.isEnabled = true // permitido apertar o botao "isEnabled"
+        } else {
+            self.loginButton.setTitleColor(.lightGray, for: .normal)
+            self.loginButton.isEnabled = false // nao permitido apertar o botao
+        }
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -131,42 +162,96 @@ class LoginScreen: UIView {
     
     private func setUpContraints() {
         NSLayoutConstraint.activate([
-           
-            self.loginLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
-            self.loginLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+         
+//            self.loginLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
+//            self.loginLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             
             
-            self.logoAppImageView.topAnchor.constraint(equalTo: self.loginLabel.bottomAnchor, constant: 20),
-            self.logoAppImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 60),
-            self.logoAppImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -60),
-            self.logoAppImageView.heightAnchor.constraint(equalToConstant: 200),
+//            self.logoAppImageView.topAnchor.constraint(equalTo: self.loginLabel.bottomAnchor, constant: 20),
+//            self.logoAppImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 60),
+//            self.logoAppImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -60),
+//            self.logoAppImageView.heightAnchor.constraint(equalToConstant: 200),
             
             
-            self.emailTextField.topAnchor.constraint(equalTo: self.logoAppImageView.bottomAnchor, constant: 20),
-            self.emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 20),
-            self.emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            self.emailTextField.heightAnchor.constraint(equalToConstant: 45),
+//            self.emailTextField.topAnchor.constraint(equalTo: self.logoAppImageView.bottomAnchor, constant: 20),
+//            self.emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 20),
+//            self.emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+//            self.emailTextField.heightAnchor.constraint(equalToConstant: 45),
             
             
-            self.passwordTextField.topAnchor.constraint(equalTo: self.emailTextField.bottomAnchor, constant: 15),
-            self.passwordTextField.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
-            self.passwordTextField.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
-            self.passwordTextField.heightAnchor.constraint(equalTo: self.emailTextField.heightAnchor),
+//            self.passwordTextField.topAnchor.constraint(equalTo: self.emailTextField.bottomAnchor, constant: 15),
+//            self.passwordTextField.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
+//            self.passwordTextField.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
+//            self.passwordTextField.heightAnchor.constraint(equalTo: self.emailTextField.heightAnchor),
             
             
-            self.loginButton.topAnchor.constraint(equalTo: self.passwordTextField.bottomAnchor, constant: 20),
-            self.loginButton.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
-            self.loginButton.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
-            self.loginButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
+//            self.loginButton.topAnchor.constraint(equalTo: self.passwordTextField.bottomAnchor, constant: 20),
+//            self.loginButton.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
+//            self.loginButton.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
+//            self.loginButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
             
             
-            self.registerButton.topAnchor.constraint(equalTo: self.loginButton.bottomAnchor, constant: 30),
-            self.registerButton.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
-            self.registerButton.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
-            self.registerButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor)
+//            self.registerButton.topAnchor.constraint(equalTo: self.loginButton.bottomAnchor, constant: 30),
+//            self.registerButton.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
+//            self.registerButton.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
+//            self.registerButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor)
             
             
         ])
     }
     
+    // offset = utilizamos quando o valor é positivo
+    // inset = utilizamos quando o valor é negativo
+
+    func configLoginLabelContraint() {
+        self.loginLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(20)
+            make.centerX.equalToSuperview()
+        }
+    }
+    
+    func configLogoAppImageViewContraint() {
+        self.logoAppImageView.snp.makeConstraints { make in
+            make.top.equalTo(self.loginLabel.snp.bottom).offset(20)
+            make.leading.equalToSuperview().offset(60)
+            make.trailing.equalToSuperview().inset(60)
+            make.height.equalTo(200)
+        }
+    }
+    
+    func configEmailTextFieldConstraint() {
+        self.emailTextField.snp.makeConstraints { make in
+            make.top.equalTo(self.logoAppImageView.snp.bottom).offset(20)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().inset(20)
+            make.height.equalTo(45)
+        }
+    }
+    
+    func configPasswordTextFieldContraint() {
+        self.passwordTextField.snp.makeConstraints { make in
+            make.top.equalTo(self.emailTextField.snp.bottom).offset(15)
+            make.leading.equalTo(self.emailTextField.snp.leading)
+            make.trailing.equalTo(self.emailTextField.snp.trailing)
+            make.height.equalTo(self.emailTextField.snp.height)
+        }
+    }
+    
+    func configLoginButtonConstraint() {
+        self.loginButton.snp.makeConstraints { make in
+            make.top.equalTo(self.passwordTextField.snp.bottom).offset(20)
+            make.leading.equalTo(self.emailTextField.snp.leading)
+            make.trailing.equalTo(self.emailTextField.snp.trailing)
+            make.height.equalTo(self.emailTextField.snp.height)
+        }
+    }
+    
+    func configRegisterButtonConstraint() {
+        self.registerButton.snp.makeConstraints { make in
+            make.top.equalTo(self.loginButton.snp.bottom).offset(30)
+            make.leading.equalTo(self.emailTextField.snp.leading)
+            make.trailing.equalTo(self.emailTextField.snp.trailing)
+            make.height.equalTo(self.emailTextField.snp.height)
+        }
+    }
 }

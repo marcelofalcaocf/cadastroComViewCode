@@ -44,7 +44,6 @@ class RegisterScreen: UIView {
         tf.borderStyle = .roundedRect
         tf.keyboardType = .emailAddress
         tf.placeholder = "Digite seu e-mail"
-        tf.isSecureTextEntry = true
         tf.font = UIFont.systemFont(ofSize: 14)
         tf.textColor = .darkGray
         return tf
@@ -58,6 +57,7 @@ class RegisterScreen: UIView {
         tf.borderStyle = .roundedRect
         tf.keyboardType = .default
         tf.placeholder = "Digite sua senha"
+        tf.isSecureTextEntry = true
         tf.font = UIFont.systemFont(ofSize: 14)
         tf.textColor = .darkGray
         return tf
@@ -80,6 +80,7 @@ class RegisterScreen: UIView {
         self.configBackGround()
         self.configSuperView()
         self.setUpContraints() // add o setUpContraints depois do configSuperView
+        self.configButtonEnabel(false)
     }
     
     private func configSuperView() {
@@ -105,6 +106,27 @@ class RegisterScreen: UIView {
     
     @objc private func tappedRegisterButton() {
         self.delegate?.actionRegisterButton()
+    }
+    
+    public func validaTextFields() {
+        let email: String = self.emailTextField.text ?? "" // sao opcionais
+        let password: String = self.passwordTextField.text ?? "" // sao opcionais
+        
+        if email != "" && password != "" { // poderia colocar "if !email.isEmpty && !password.isEmpty {}
+            self.configButtonEnabel(true)
+        } else {
+            self.configButtonEnabel(false)
+        }
+    }
+    
+    private func configButtonEnabel(_ enabel: Bool) {
+        if enabel {
+            self.registerButton.setTitleColor(.white, for: .normal)
+            self.registerButton.isEnabled = true // permitido apertar o botao "isEnabled"
+        } else {
+            self.registerButton.setTitleColor(.lightGray, for: .normal)
+            self.registerButton.isEnabled = false // nao permitido apertar o botao
+        }
     }
     
     required init?(coder: NSCoder) {
