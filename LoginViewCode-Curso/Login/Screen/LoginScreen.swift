@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol loginScreenProtocol: class {
+protocol loginScreenProtocol: AnyObject {
     func actionLoginButton()
     func actionRegisterButton()
 }
@@ -101,7 +101,7 @@ class LoginScreen: UIView {
         self.configLoginButtonConstraint()
         self.configRegisterButtonConstraint()
         //-----------------------
-        self.setUpContraints()
+        // self.setUpContraints()
         self.configButtonEnabel(false)
     }
     
@@ -152,6 +152,14 @@ class LoginScreen: UIView {
         }
     }
     
+    public func getEmail() -> String {
+        return self.emailTextField.text ?? ""
+    }
+    
+    public func getPassword() -> String {
+        return self.passwordTextField.text ?? ""
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -160,9 +168,9 @@ class LoginScreen: UIView {
     //constant: me afasta/aproxima do elemento referente(equalTo)
     //equalToConstant: setando um valor fixo para um determinado elemento
     
-    private func setUpContraints() {
-        NSLayoutConstraint.activate([
-         
+//    private func setUpContraints() {
+//        NSLayoutConstraint.activate([
+//
 //            self.loginLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
 //            self.loginLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             
@@ -197,8 +205,8 @@ class LoginScreen: UIView {
 //            self.registerButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor)
             
             
-        ])
-    }
+//        ])
+//    }
     
     // offset = utilizamos quando o valor é positivo
     // inset = utilizamos quando o valor é negativo

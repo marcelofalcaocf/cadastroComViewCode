@@ -8,5 +8,7 @@ target 'LoginViewCode-Curso' do
   # Pods for LoginViewCode-Curso
 	
 	pod 'SnapKit', '~> 5.0.0'
+	pod 'FirebaseAuth'
+	pod 'FirebaseFirestore'
 
 end
