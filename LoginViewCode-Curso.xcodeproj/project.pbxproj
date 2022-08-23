@@ -10,6 +10,11 @@
 		00A2DA9B40F3EFFEDE335178 /* Pods_LoginViewCode_Curso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC3387188141A0FBEF2F8CAD /* Pods_LoginViewCode_Curso.framework */; };
 		143F910B28AE6AA800A1C6D7 /* UserDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143F910A28AE6AA800A1C6D7 /* UserDetailTableViewCell.swift */; };
 		143F910E28AE6F6C00A1C6D7 /* DataUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143F910D28AE6F6C00A1C6D7 /* DataUser.swift */; };
+		143F911128AFC3EB00A1C6D7 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143F911028AFC3EB00A1C6D7 /* UserDetailView.swift */; };
+		143F911528AFC8FB00A1C6D7 /* SportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143F911428AFC8FB00A1C6D7 /* SportTableViewCell.swift */; };
+		143F911828AFCA5700A1C6D7 /* SportTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143F911728AFCA5700A1C6D7 /* SportTableViewCellScreen.swift */; };
+		143F911B28B3B03700A1C6D7 /* SportCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143F911A28B3B03700A1C6D7 /* SportCollectionViewCell.swift */; };
+		143F911D28B3B08700A1C6D7 /* SportCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143F911C28B3B08700A1C6D7 /* SportCollectionViewCellScreen.swift */; };
 		14C04A9428A6F3A6000EDCB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C04A9328A6F3A6000EDCB9 /* AppDelegate.swift */; };
 		14C04A9628A6F3A6000EDCB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C04A9528A6F3A6000EDCB9 /* SceneDelegate.swift */; };
 		14C04A9828A6F3A6000EDCB9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C04A9728A6F3A6000EDCB9 /* LoginVC.swift */; };
@@ -27,6 +32,11 @@
 /* Begin PBXFileReference section */
 		143F910A28AE6AA800A1C6D7 /* UserDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailTableViewCell.swift; sourceTree = "<group>"; };
 		143F910D28AE6F6C00A1C6D7 /* DataUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUser.swift; sourceTree = "<group>"; };
+		143F911028AFC3EB00A1C6D7 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
+		143F911428AFC8FB00A1C6D7 /* SportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableViewCell.swift; sourceTree = "<group>"; };
+		143F911728AFCA5700A1C6D7 /* SportTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableViewCellScreen.swift; sourceTree = "<group>"; };
+		143F911A28B3B03700A1C6D7 /* SportCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCollectionViewCell.swift; sourceTree = "<group>"; };
+		143F911C28B3B08700A1C6D7 /* SportCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCollectionViewCellScreen.swift; sourceTree = "<group>"; };
 		14C04A9028A6F3A6000EDCB9 /* LoginViewCode-Curso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LoginViewCode-Curso.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14C04A9328A6F3A6000EDCB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14C04A9528A6F3A6000EDCB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,7 +80,8 @@
 		143F910928AE697600A1C6D7 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				143F910A28AE6AA800A1C6D7 /* UserDetailTableViewCell.swift */,
+				143F911328AFC8D100A1C6D7 /* SportTableViewCell */,
+				143F911228AFC89200A1C6D7 /* UserDetailTableViewCell */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -81,6 +92,58 @@
 				143F910D28AE6F6C00A1C6D7 /* DataUser.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		143F910F28AFC3AF00A1C6D7 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				143F911028AFC3EB00A1C6D7 /* UserDetailView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		143F911228AFC89200A1C6D7 /* UserDetailTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				143F910A28AE6AA800A1C6D7 /* UserDetailTableViewCell.swift */,
+				143F910F28AFC3AF00A1C6D7 /* CustomView */,
+			);
+			path = UserDetailTableViewCell;
+			sourceTree = "<group>";
+		};
+		143F911328AFC8D100A1C6D7 /* SportTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				143F911928B3AFEE00A1C6D7 /* CollectionViewCell */,
+				143F911628AFCA2700A1C6D7 /* CustomView */,
+				143F911428AFC8FB00A1C6D7 /* SportTableViewCell.swift */,
+			);
+			path = SportTableViewCell;
+			sourceTree = "<group>";
+		};
+		143F911628AFCA2700A1C6D7 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				143F911728AFCA5700A1C6D7 /* SportTableViewCellScreen.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		143F911928B3AFEE00A1C6D7 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				143F911E28B3B09900A1C6D7 /* CollectionCustomView */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		143F911E28B3B09900A1C6D7 /* CollectionCustomView */ = {
+			isa = PBXGroup;
+			children = (
+				143F911C28B3B08700A1C6D7 /* SportCollectionViewCellScreen.swift */,
+				143F911A28B3B03700A1C6D7 /* SportCollectionViewCell.swift */,
+			);
+			path = CollectionCustomView;
 			sourceTree = "<group>";
 		};
 		14C04A8728A6F3A6000EDCB9 = {
@@ -329,8 +392,13 @@
 				14C04AB428A92285000EDCB9 /* RegisterScreen.swift in Sources */,
 				14F8F00B28AD373000EC379A /* HomeVC.swift in Sources */,
 				14C04A9828A6F3A6000EDCB9 /* LoginVC.swift in Sources */,
+				143F911B28B3B03700A1C6D7 /* SportCollectionViewCell.swift in Sources */,
 				14C04AAB28A70A99000EDCB9 /* LoginScreen.swift in Sources */,
+				143F911D28B3B08700A1C6D7 /* SportCollectionViewCellScreen.swift in Sources */,
+				143F911128AFC3EB00A1C6D7 /* UserDetailView.swift in Sources */,
 				143F910E28AE6F6C00A1C6D7 /* DataUser.swift in Sources */,
+				143F911828AFCA5700A1C6D7 /* SportTableViewCellScreen.swift in Sources */,
+				143F911528AFC8FB00A1C6D7 /* SportTableViewCell.swift in Sources */,
 				14C04A9428A6F3A6000EDCB9 /* AppDelegate.swift in Sources */,
 				143F910B28AE6AA800A1C6D7 /* UserDetailTableViewCell.swift in Sources */,
 				14F8F00D28AD382500EC379A /* HomeScreen.swift in Sources */,
