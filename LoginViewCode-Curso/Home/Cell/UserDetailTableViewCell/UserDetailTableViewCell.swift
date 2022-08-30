@@ -23,13 +23,14 @@ class UserDetailTableViewCell: UITableViewCell {
         self.configContraintsDescriptionCell()
     }
     
+    func addSubview() {
+        self.contentView.addSubview(userDetailView)
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func addSubview() {
-        self.contentView.addSubview(userDetailView)
-    }
     
     public func setUpCell(data: DataUser) {
         self.userDetailView.nameLabel.text = data.name

@@ -33,7 +33,7 @@ class LoginVC: UIViewController {
     
 }
 
-extension LoginVC: loginScreenProtocol {
+extension LoginVC: LoginScreenProtocol {
     
     func actionLoginButton() {
         

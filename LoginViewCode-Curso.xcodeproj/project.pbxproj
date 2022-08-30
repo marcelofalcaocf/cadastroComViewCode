@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00A2DA9B40F3EFFEDE335178 /* Pods_LoginViewCode_Curso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC3387188141A0FBEF2F8CAD /* Pods_LoginViewCode_Curso.framework */; };
+		142D5E0628BE60BF002BA5EC /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D5E0528BE60BF002BA5EC /* Sport.swift */; };
 		143F910B28AE6AA800A1C6D7 /* UserDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143F910A28AE6AA800A1C6D7 /* UserDetailTableViewCell.swift */; };
 		143F910E28AE6F6C00A1C6D7 /* DataUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143F910D28AE6F6C00A1C6D7 /* DataUser.swift */; };
 		143F911128AFC3EB00A1C6D7 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143F911028AFC3EB00A1C6D7 /* UserDetailView.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		142D5E0528BE60BF002BA5EC /* Sport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
 		143F910A28AE6AA800A1C6D7 /* UserDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailTableViewCell.swift; sourceTree = "<group>"; };
 		143F910D28AE6F6C00A1C6D7 /* DataUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUser.swift; sourceTree = "<group>"; };
 		143F911028AFC3EB00A1C6D7 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				143F910D28AE6F6C00A1C6D7 /* DataUser.swift */,
+				142D5E0528BE60BF002BA5EC /* Sport.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				14C04A9828A6F3A6000EDCB9 /* LoginVC.swift in Sources */,
 				143F911B28B3B03700A1C6D7 /* SportCollectionViewCell.swift in Sources */,
 				14C04AAB28A70A99000EDCB9 /* LoginScreen.swift in Sources */,
+				142D5E0628BE60BF002BA5EC /* Sport.swift in Sources */,
 				143F911D28B3B08700A1C6D7 /* SportCollectionViewCellScreen.swift in Sources */,
 				143F911128AFC3EB00A1C6D7 /* UserDetailView.swift in Sources */,
 				143F910E28AE6F6C00A1C6D7 /* DataUser.swift in Sources */,

@@ -19,11 +19,18 @@ class SportCollectionViewCell: UICollectionViewCell {
         self.configContraints()
     }
     
+    public func setupCell(data: Sport) {
+        self.sportCollectionViewCellScreen.imageView.image = UIImage(named: data.nameImage)
+        self.sportCollectionViewCellScreen.sportName.text = data.name
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     func addSubView() {
+        self.sportCollectionViewCellScreen.layer.borderWidth = 6.0
+        self.sportCollectionViewCellScreen.layer.borderColor = UIColor.blue.cgColor
         self.sportCollectionViewCellScreen.translatesAutoresizingMaskIntoConstraints = false
         self.contentView.addSubview(self.sportCollectionViewCellScreen)
     }

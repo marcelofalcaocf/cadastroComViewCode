@@ -13,7 +13,7 @@ class SportTableViewCellScreen: UIView {
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout.init()) // jeito nativo do collection view
         collectionView.translatesAutoresizingMaskIntoConstraints = false // sempre false
         collectionView.showsHorizontalScrollIndicator = false // indicador de scroll
-        collectionView.backgroundColor = .red   // .white
+        collectionView.backgroundColor = .none   // .white
         collectionView.delaysContentTouches = false // para nao ter delay
         collectionView.register(SportCollectionViewCell.self, forCellWithReuseIdentifier: SportCollectionViewCell.indetifier)
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init() // Acessar as propriedades da cv
